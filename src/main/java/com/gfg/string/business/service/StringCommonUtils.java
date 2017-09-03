@@ -1,5 +1,6 @@
 package com.gfg.string.business.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class StringCommonUtils {
@@ -23,5 +24,22 @@ public class StringCommonUtils {
 			return stringBuilder.toString();
 		}
 		return "**";
+	}
+
+	public static boolean anagramCanBePalindrome(String input) {
+		if (input != null) {
+			ArrayList<Character> list = new ArrayList<>();
+			for (int i = 0; i < input.length(); i++) {
+				if (list.contains(input.charAt(i))) {
+					list.remove(list.indexOf(input.charAt(i)));
+				} else {
+					list.add(input.charAt(i));
+				}
+			}
+			if (!(list.size() > 1)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
