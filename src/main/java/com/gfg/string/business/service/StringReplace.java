@@ -1,4 +1,4 @@
-package com.gfg.elusium.business.service;
+package com.gfg.string.business.service;
 
 public class StringReplace {
 	public static void main(String[] args) {
